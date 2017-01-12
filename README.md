@@ -1,14 +1,13 @@
-<div class="section">
 
 # Overview
 
-<span style="letter-spacing: 0.05em; line-height: 2.1;">이 문서는 REST기반의 문자메시지 API로 </span><span style="font-size: 12px; letter-spacing: 0.05em; line-height: 2.1;">예약 문자를 포함한 문자전송, 전송된 문자의 상태 확인, 잔액정보 및 예약취소 등의 작업을 요청하는 방법을 기술하고 있습니다. </span><span style="font-size: 12px; letter-spacing: 0.05em; line-height: 2.1;">PHP, Java, Python 등 다양한 언어로 구현된 샘플을</span> [SDK](http://www.coolsms.co.kr/SDK_ko)<span style="font-size: 12px; letter-spacing: 0.05em; line-height: 2.1;"> 페이지에서 제공하고 있습니다..</span>
+이 문서는 REST기반의 문자메시지 API로 예약 문자를 포함한 문자전송, 전송된 문자의 상태 확인, 잔액정보 및 예약취소 등의 작업을 요청하는 방법을 기술하고 있습니다. PHP, Java, Python 등 다양한 언어로 구현된 샘플을[SDK](http://www.coolsms.co.kr/SDK_ko) 페이지에서 제공하고 있습니다.
 
 모든 Request 호출에는 API Key를 비롯한 인증정보를 포함하여 서버의 인증을 거쳐야 합니다. 인증에 대한 상세한 내용은 [Authentication](http://www.coolsms.co.kr/REST_API#Authentication) 을 확인하세요.
 
 인증을 위한 API Key 및 API Secret 코드는 [문자메시지 > 환경설정 > API Key 관리](http://www.coolsms.co.kr/index.php?mid=service_setup&act=dispSmsconfigCredentials) 메뉴에서 발급 및 관리가 가능합니다. [API Key 관리](http://www.coolsms.co.kr/Man_Credentials) 문서를 참고하세요.
 
-<span style="line-height: 1.5;">아래는 각 Resource의 역할을 테이블로 정리하였습니다. 상세한 설명을 보시려면 해당 Resource를 클릭하여 주세요.</span>
+아래는 각 Resource의 역할을 테이블로 정리하였습니다. 상세한 설명을 보시려면 해당 Resource를 클릭하여 주세요.
 
 <table>
 
@@ -180,11 +179,8 @@
 
 요청에 대한 응답의 상세는 [Response](http://www.coolsms.co.kr/REST_API#Response) 를 확인하세요.
 
-<span style="letter-spacing: 0.05em; line-height: 2.1;">REST API 관련 질의 응답 및 정보 공유는</span> [개발자포럼](http://www.coolsms.co.kr/devforum)<span style="letter-spacing: 0.05em; line-height: 2.1;">을 이용해주세요.</span>
+REST API 관련 질의 응답 및 정보 공유는 [개발자포럼](http://www.coolsms.co.kr/devforum)을 이용해주세요.
 
-</div>
-
-<div class="section">
 
 # Change Log
 
@@ -282,10 +278,6 @@ Full JSON 지원
 
 </table>
 
-</div>
-
-<div class="section">
-
 # 그룹메시지
 
 대용량의 메시지를 안전하고 빠르게 전송하도록 그룹메시지를 위한 API를 제공합니다.  
@@ -295,15 +287,11 @@ Full JSON 지원
 
 <span style="font-size: 12px; letter-spacing: 0.6px; line-height: 28px; background-color: rgb(255, 255, 255);">new_group 호출로 메시지를 담을 그룹을 생성하고 리턴된 그룹아이디를 키로 add_messages 호출로 메시지를 접수하고 send 호출로 접수된 메시지를 서버단에 전송을 수행합니다. 이로 인해 한번 접수된 메시지는 유실 없이 안정적으로 발송이 보장됩니다.</span><span style="font-size: 12px; letter-spacing: 0.05em; line-height: 2.1;"> </span>
 
-</div>
-
-<div class="section">
 
 ## GET new_group
 
 메시지를 담을 그룹을 생성하여 그룹아이디를 리턴합니다.
 
-<div style="letter-spacing: 0.6px; line-height: 22.9091px;">
 
 ### Resource URL
 
@@ -519,17 +507,10 @@ JSON 포맷으로 리턴 됩니다.
   "group_id":"565ba3d7d216a"
 }</pre>
 
-</div>
-
-</div>
-
-<div class="section">
 
 ## GET group_list
 
 <span style="background-color: rgb(255, 255, 255);">생성된 그룹 목록을 리턴합니다.</span>
-
-<div style="letter-spacing: 0.6px; line-height: 22.9091px;">
 
 ### Resource URL
 
@@ -617,17 +598,11 @@ JSON 포맷으로 리턴 됩니다.
 ]
 </pre>
 
-</div>
-
-</div>
-
-<div class="section">
 
 ## POST delete_groups
 
 <span style="background-color: rgb(255, 255, 255);">그룹을 삭제합니다. 담겨 있는 메시지도 함께 삭제됩니다.</span>
 
-<div style="letter-spacing: 0.6px; line-height: 22.9091px;">
 
 ### Resource URL
 
@@ -755,17 +730,10 @@ JSON 포맷으로 리턴 됩니다.
   ]
 }</pre>
 
-</div>
-
-</div>
-
-<div class="section">
 
 ## GET groups/{group_id}
 
 <span style="background-color: rgb(255, 255, 255);">그룹 정보를 리턴합니다.</span>
-
-<div style="letter-spacing: 0.6px; line-height: 22.9091px;">
 
 ### Resource URL
 
@@ -872,11 +840,6 @@ JSON 포맷으로 리턴 됩니다.
   "message_count":970
 }</pre>
 
-</div>
-
-</div>
-
-<div class="section" style="letter-spacing: 0.6px; line-height: 22.9091px;">
 
 ## POST groups/{group_id}/add_messages
 
@@ -1181,9 +1144,6 @@ JSON 포맷으로 리턴 됩니다.
 추가하신 메시지의 전체 개수가 success_count로 리턴되면 정상적으로 서버에 접수 완료된 것이며, 에러가 발생한 메시지는 error count 와 error_list 가 리턴됩니다.  
 리턴된 error_code의 정보는 http://www.coolsms.co.kr/Legacy_Result_Codes 을 참고하시면 됩니다. 여기서 리턴되는 Response의 내용은 서버에 전송 요청한 것에 대한 정보이며 실제 휴대전화로 전송한 것에 대한 정보가 아닙니다.  sent 조회로 실제 전송된 결과를 확인하실 수 있습니다.
 
-</div>
-
-<div class="section">
 
 ## POST groups/{group_id}/add_messages.json
 
@@ -1243,7 +1203,6 @@ JSON 형식의 메시지 데이터
 
 #### JSON Fields
 
-<div>
 
 <table style="width: 642px; letter-spacing: 0.6px; line-height: 22.9091px;">
 
@@ -1384,7 +1343,6 @@ http://countrycode.org 참고
 
 </table>
 
-</div>
 
 ### messages 포맷
 
@@ -1564,9 +1522,6 @@ JSON 포맷으로 리턴 됩니다.
 추가하신 메시지의 전체 개수가 success_count로 리턴되면 정상적으로 서버에 접수 완료된 것이며, 에러가 발생한 메시지는 error count 와 error_list 가 리턴됩니다.  
 리턴된 error_code의 정보는 http://www.coolsms.co.kr/Legacy_Result_Codes 을 참고하시면 됩니다. 여기서 리턴되는 Response의 내용은 서버에 전송 요청한 것에 대한 정보이며 실제 휴대전화로 전송한 것에 대한 정보가 아닙니다.  sent 조회로 실제 전송된 결과를 확인하실 수 있습니다.
 
-</div>
-
-<div class="section" style="letter-spacing: 0.6px; line-height: 22.9091px;">
 
 ## GET groups/{group_id}/message_list
 
@@ -1720,9 +1675,7 @@ JSON 포맷으로 리턴 됩니다.
   ]
 }</pre>
 
-</div>
 
-<div class="section" style="letter-spacing: 0.6px; line-height: 22.9091px;">
 
 ## POST groups/{group_id}/delete_messages
 
@@ -1856,9 +1809,7 @@ JSON 포맷으로 리턴 됩니다.
   ]
 }</pre>
 
-</div>
 
-<div class="section">
 
 ## POST groups/{group_id}/send
 
@@ -1948,17 +1899,12 @@ JSON 포맷으로 리턴 됩니다.
   "group_id": "565ba3d7d216a"
 }</pre>
 
-</div>
-
-<div class="section">
 
 # 이미지
 
 이미지를 서버에 안전하게 미리 업로드하여 문자발송 때 사용할 수 있어 더욱 안정적인 발송을 보장합니다.
 
-</div>
 
-<div class="section">
 
 ## POST upload_image
 
@@ -2081,9 +2027,6 @@ JSON 포맷으로 리턴 됩니다.
   "image_id": IMG565BA2D9E4239"
 }</pre>
 
-</div>
-
-<div class="section">
 
 ## GET image_list
 
@@ -2228,9 +2171,7 @@ JSON 포맷으로 리턴 됩니다.
   ]
 }</pre>
 
-</div>
 
-<div class="section">
 
 ## GET images/{image_id}
 
@@ -2375,9 +2316,6 @@ JSON 포맷으로 리턴 됩니다.
   "height":"100"
 }</pre>
 
-</div>
-
-<div class="section">
 
 ## POST delete_images
 
@@ -2507,9 +2445,6 @@ JSON 포맷으로 리턴 됩니다.
   ]
 }</pre>
 
-</div>
-
-<div class="section">
 
 # POST send
 
@@ -2941,15 +2876,11 @@ result_code 가 00 이면 정상적인 접수이며 이 외의 코드는 http://
   "result_message": "Success"
 }</pre>
 
-</div>
-
-<div class="section">
 
 # GET sent
 
 <span style="background-color: rgb(255, 255, 255);">발송된 문자메시지의 목록을 가져옵니다.</span> 
 
-<div>
 
 ## Resource URL
 
@@ -3237,11 +3168,6 @@ Response Format은 json을 사용합니다.
 
 result_code 는 [http://www.coolsms.co.kr/Legacy_Result_Codes](http://www.coolsms.co.kr/Legacy_Result_Codes) 페이지를 참고 하세요.
 
-</div>
-
-</div>
-
-<div class="section">
 
 # POST cancel
 
@@ -3349,9 +3275,6 @@ JSON 포맷으로 리턴 됩니다.
 
 </table>
 
-</div>
-
-<div class="section">
 
 # GET balance
 
@@ -3404,9 +3327,6 @@ Response Format은 json을 사용합니다.
   "point": "890"
 }</pre>
 
-</div>
-
-<div class="section">
 
 # GET status
 
@@ -3567,9 +3487,6 @@ JSON 포맷으로 리턴 됩니다.
   }
 ]</pre>
 
-</div>
-
-<div class="section">
 
 # 메시지 상태 코드
 
@@ -3967,4 +3884,3 @@ JSON 포맷으로 리턴 됩니다.
 
 </table>
 
-</div>
