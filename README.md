@@ -9,173 +9,36 @@
 
 아래는 각 Resource의 역할을 테이블로 정리하였습니다. 상세한 설명을 보시려면 해당 Resource를 클릭하여 주세요.
 
-<table>
+## 그룹메시지
+| Resource | Description |
+| -------- | ----------- |
+| 그룹메시지 | [GET new_group](#GETnew_group) | 그룹 생성 |
+| [GET group_list](#GETgroup_list) | 그룹 목록 |
+| [POST delete_groups](#POSTdelete_groups) | 그룹 삭제 |
+| [GET groups/{group_id}](#GETgroupsgroup_id) | 그룹 정보 리턴 |
+| [POST groups/{group_id}/add_messages](#POSTgroupsgroup_idadd_messages) | 메시지 추가 |
+| [POST groups/{group_id}/add_messages.json](#POSTgroupsgroup_idadd_messagesjson) | JSON형식으로  메시지 추가 |
+| [GET groups/{group_id}/message_list](#GETgroupsgroup_idmessage_list) | 추가된 메시지 목록 |
+| [GET groups/{group_id}/delete_messages](#POSTgroupsgroup_iddelete_messages) | 메시지 삭제 |
+| [POST groups/{group_id}/send](#POSTgroupsgroup_idsend) | 메시지 발송 |
+
+## 이미지
+| Resource | Description |
+| -------- | ----------- |
+| [POST upload_image](#POSTupload_image) | 이미지 업로드 |
+| [GET image_list](#GETimage_list) | 이미지 목록 |
+| [GET images/{image_id}](#GETimagesimage_id) | 이미지 정보 |
+| [POST delete_images](#POSTdelete_images) | 이미지 삭제 |
+
+## 기타
+| Resource | Description |
+| -------- | ----------- |
+| [POST send](#POSTsend) | 문자발송 요청 |
+| [GET sent](#GETsent) | 발송된 문자정보 조회 |
+| [POST cancel](#POSTcancel) | 예약문자 취소 |
+| [GET balance](#GETbalance) | 전액정보 조회 |
+| [GET status](#GETstatus) | 전송채널 상태 조회 |
 
-<tbody>
-
-<tr>
-
-<th>Part</th>
-
-<th>Resource</th>
-
-<th>Description</th>
-
-</tr>
-
-<tr>
-
-<td rowspan="9">그룹메시지</td>
-
-<td>[GET new_group](#GETnew_group)</td>
-
-<td>그룹 생성</td>
-
-</tr>
-
-<tr>
-
-<td>[GET group_list](#GETgroup_list)</td>
-
-<td>그룹 목록</td>
-
-</tr>
-
-<tr>
-
-<td>[POST delete_groups](#POSTdelete_groups)</td>
-
-<td>그룹 삭제</td>
-
-</tr>
-
-<tr>
-
-<td>[GET groups/{group_id}](#GETgroupsgroup_id)</td>
-
-<td>그룹 정보 리턴</td>
-
-</tr>
-
-<tr>
-
-<td>[POST groups/{group_id}/add_messages](#POSTgroupsgroup_idadd_messages)</td>
-
-<td>메시지 추가</td>
-
-</tr>
-
-<tr>
-
-<td>[POST groups/{group_id}/add_messages.json](#POSTgroupsgroup_idadd_messagesjson)</td>
-
-<td>JSON형식으로  메시지 추가</td>
-
-</tr>
-
-<tr>
-
-<td>[GET groups/{group_id}/message_list](#GETgroupsgroup_idmessage_list)</td>
-
-<td>추가된 메시지 목록</td>
-
-</tr>
-
-<tr>
-
-<td>[GET groups/{group_id}/delete_messages](#POSTgroupsgroup_iddelete_messages)</td>
-
-<td>메시지 삭제</td>
-
-</tr>
-
-<tr>
-
-<td>[POST groups/{group_id}/send](#POSTgroupsgroup_idsend)</td>
-
-<td>메시지 발송</td>
-
-</tr>
-
-<tr>
-
-<td rowspan="4">이미지</td>
-
-<td>[POST upload_image](#POSTupload_image)</td>
-
-<td>이미지 업로드</td>
-
-</tr>
-
-<tr>
-
-<td>[GET image_list](#GETimage_list)</td>
-
-<td>이미지 목록</td>
-
-</tr>
-
-<tr>
-
-<td>[GET images/{image_id}](#GETimagesimage_id)</td>
-
-<td>이미지 정보</td>
-
-</tr>
-
-<tr>
-
-<td>[POST delete_images](#POSTdelete_images)</td>
-
-<td>이미지 </td>
-
-</tr>
-
-<tr>
-
-<td rowspan="5">기타</td>
-
-<td>[POST send](#POSTsend)</td>
-
-<td>문자발송 요청</td>
-
-</tr>
-
-<tr>
-
-<td>[GET sent](#GETsent)</td>
-
-<td>발송된 문자정보 조회</td>
-
-</tr>
-
-<tr>
-
-<td>[POST cancel](#POSTcancel)</td>
-
-<td>예약문자 취소</td>
-
-</tr>
-
-<tr>
-
-<td>[GET balance](#GETbalance)</td>
-
-<td>전액정보 조회</td>
-
-</tr>
-
-<tr>
-
-<td>[GET status](#GETstatus)</td>
-
-<td>전송채널 상태 조회</td>
-
-</tr>
-
-</tbody>
-
-</table>
 
 요청에 대한 응답의 상세는 [Response](http://www.coolsms.co.kr/REST_API#Response) 를 확인하세요.
 
@@ -184,108 +47,28 @@ REST API 관련 질의 응답 및 정보 공유는 [개발자포럼](http://www.
 
 # Change Log
 
-<table>
+| Version | Description |
+| ------- | ----------- |
+| 1.1     | Android 누리고 푸시 지원<br>1만건 전송을 40초 이하로 단축<br>후불제 회원 지원 |
+| 1.2     | iOS 누리고 푸시 지원<br>1만건 전송을 20초 이하로 단축 |
+| 1.3     | 쿨서포터즈 정책 지원 반영 |
+| 1.4     | status 리소스에 시간별, 일별 전송현황을 위한 date, unit 필드 추가 |
+| 1.5     | Agent 정보 전송 |
+| 1.6     | 카카오 알림톡 기능 추가 |
+| 2.0     | 그룹 메시징 추가 |
+| 3.0     | Full JSON 지원<br>유니코드 단일 지원 |
 
-<tbody>
-
-<tr>
-
-<th>Version</th>
-
-<th>Description</th>
-
-</tr>
-
-<tr>
-
-<td>1.1</td>
-
-<td>
-
-Android 누리고 푸시 지원  
-1만건 전송을 40초 이하로 단축
-
-후불제 회원 지원
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>1.2</td>
-
-<td>iOS 누리고 푸시 지원  
-1만건 전송을 20초 이하로 단축</td>
-
-</tr>
-
-<tr>
-
-<td>1.3</td>
-
-<td>쿨서포터즈 정책 지원 반영</td>
-
-</tr>
-
-<tr>
-
-<td>1.4</td>
-
-<td>status 리소스에 시간별, 일별 전송현황을 위한 date, unit 필드 추가</td>
-
-</tr>
-
-<tr>
-
-<td>1.5</td>
-
-<td>Agent 정보 전송</td>
-
-</tr>
-
-<tr>
-
-<td>1.6</td>
-
-<td>카카오 알림톡 기능 추가</td>
-
-</tr>
-
-<tr>
-
-<td>2.0</td>
-
-<td>그룹 메시징 추가</td>
-
-</tr>
-
-<tr>
-
-<td>3.0</td>
-
-<td>
-
-Full JSON 지원
-
-유니코드 단일 지원
-
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
 
 # 그룹메시지
 
 대용량의 메시지를 안전하고 빠르게 전송하도록 그룹메시지를 위한 API를 제공합니다.  
 아래의 API 호출 흐름으로 대량의 그룹메시지를 보낼 수 있습니다.
 
-<pre class="prettyprint">new_group  ->  add_messages  ->  send</pre>
+```
+new_group  ->  add_messages  ->  send
+```
 
-<span style="font-size: 12px; letter-spacing: 0.6px; line-height: 28px; background-color: rgb(255, 255, 255);">new_group 호출로 메시지를 담을 그룹을 생성하고 리턴된 그룹아이디를 키로 add_messages 호출로 메시지를 접수하고 send 호출로 접수된 메시지를 서버단에 전송을 수행합니다. 이로 인해 한번 접수된 메시지는 유실 없이 안정적으로 발송이 보장됩니다.</span><span style="font-size: 12px; letter-spacing: 0.05em; line-height: 2.1;"> </span>
+new_group 호출로 메시지를 담을 그룹을 생성하고 리턴된 그룹아이디를 키로 add_messages 호출로 메시지를 접수하고 send 호출로 접수된 메시지를 서버단에 전송을 수행합니다. 이로 인해 한번 접수된 메시지는 유실 없이 안정적으로 발송이 보장됩니다.
 
 
 ## GET new_group
@@ -299,203 +82,28 @@ https://coolsms.co.kr/sms/3/new_group
 
 ### Parameters
 
-<table>
+| Mandatory | Field | Description |
+| --------- | ----- | ----------- |
+|     Ο     | 인증정보 | 인증데이터는 필수입니다. [Authentication](http://www.coolsms.co.kr/REST_API#Authentication) 참고 |
+|           | srk | 솔루션 제공 수수료를 정산받을 솔루션 등록키<br>자세한 안내는 http://www.coolsms.co.kr/sp 을 참고하세요. |
+|           | mode | test로 입력할 경우 CARRIER 시뮬레이터로 시뮬레이션됩니다.<br>** 수신번호를 반드시 01000000000 으로 테스트 **<br>예약필드 datetime는 무시됩니다.<br>결과값은 60 잔액에서 실제 차감되며 다음날 새벽에 재충전됩니다. |
+|           | force_sms | 누리고푸시를 사용하더라도 강제로 문자 발송.<br>true 혹은 false(기본) |
+|           | only_ata  | 알림톡이 실패해도 문자메시지로 대체하여 발송하지 않습니다.<br>true 혹은 false(기본) |
+|           | site_user | API를 호출하는 사이트에서 관리하는 유저 아이디 입력.<br>미입력시 __private__ 으로 입력됩니다.<br>해당 아이디 앞으로 등록된 발신번호를 확인합니다.<br>발신번호 등록 API를 참고하세요.<br>http://www.coolsms.co.kr/SenderID_API |
+|           | os_platform | 클라이언트의 OS 및 플랫폼 버전<br>예) CentOS 6.6<br>(v1.5에서 추가됨) |
+|           | dev_lang | 개발 프로그래밍 언어<br>예) PHP 5.3.3<br>(v1.5에서 추가됨) |
+|           | sdk_version | SDK 버전<br>예) PHP SDK 1.5<br>(v1.5에서 추가됨) |
+|           | app_version | 어플리케이션 버전<br>예) Purplebook 4.1<br>(v1.5에서 추가됨) |
 
-<thead>
-
-<tr>
-
-<th style="width: 64px;">Mandatory</th>
-
-<th style="width: 162px;">Field</th>
-
-<th>Description</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td style="width: 64px;">Ο</td>
-
-<td style="width: 162px;">인증정보</td>
-
-<td>인증데이터는 필수입니다. [Authentication](http://www.coolsms.co.kr/REST_API#Authentication) 참고</td>
-
-</tr>
-
-<tr>
-
-<td style="width: 198px;">srk</td>
-
-<td>솔루션 제공 수수료를 정산받을 솔루션 등록키  
-자세한 안내는 http://www.coolsms.co.kr/sp 을 참고하세요.</td>
-
-</tr>
-
-<tr>
-
-<td style="width: 198px;">mode (현재 미지원)</td>
-
-<td>
-
-test로 입력할 경우 CARRIER 시뮬레이터로 시뮬레이션됩니다.
-
-** 수신번호를 반드시 01000000000 으로 테스트 **  
-예약필드 datetime는 무시됩니다.
-
-결과값은 60 잔액에서 실제 차감되며 다음날 새벽에 재충전됩니다.
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="width: 198px;">force_sms<span style="font-family: &quot;Nanum Gothic&quot;; letter-spacing: 0.6px; line-height: 22.9091px; background-color: rgb(255, 255, 255);"> (현재 미지원)</span></td>
-
-<td>
-
-누리고푸시를 사용하더라도 강제로 문자 발송.
-
-true 혹은 false(기본)
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="width: 198px;">only_ata</td>
-
-<td>알림톡이 실패해도 문자메시지로 대체하여 발송하지 않습니다.  
-true 혹은 false(기본)</td>
-
-</tr>
-
-<tr>
-
-<td style="width: 198px;">site_user</td>
-
-<td>
-
-API를 호출하는 사이트에서 관리하는 유저 아이디 입력.
-
-미입력시 __private__ 으로 입력됩니다.  
-해당 아이디 앞으로 등록된 발신번호를 확인합니다.  
-발신번호 등록 API를 참고하세요.  
-http://www.coolsms.co.kr/SenderID_API
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="width: 198px;">os_platform</td>
-
-<td>
-
-클라이언트의 OS 및 플랫폼 버전
-
-예) CentOS 6.6
-
-(v1.5에서 추가됨)
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="width: 198px;">dev_lang</td>
-
-<td>
-
-개발 프로그래밍 언어
-
-예) PHP 5.3.3
-
-(v1.5에서 추가됨)
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="width: 198px;">sdk_version</td>
-
-<td>
-
-SDK 버전
-
-예) PHP SDK 1.5
-
-(v1.5에서 추가됨)
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="width: 198px;">app_version</td>
-
-<td>
-
-어플리케이션 버전
-
-예) Purplebook 4.1
-
-(v1.5에서 추가됨)
-
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
 
 ### Response
 
 JSON 포맷으로 리턴 됩니다.
 
-<table>
+| Mandatory | Field | Description |
+| --------- | ----- | ----------- |
+| O         | group_id | 그룹 아이디 |
 
-<thead>
-
-<tr>
-
-<th>Mandatory</th>
-
-<th>Field</th>
-
-<th>Description</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>O</td>
-
-<td>group_id</td>
-
-<td>그룹 아이디</td>
-
-</tr>
-
-</tbody>
-
-</table>
 
 ### Example Request
 
