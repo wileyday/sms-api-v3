@@ -734,6 +734,7 @@ JSON 포맷으로 리턴 됩니다.
 
 
 ### Request Syntax
+
 ```
       "Authorization" : {                                                       
         "ApiKey": "xxxx",                                                       
@@ -759,6 +760,7 @@ JSON 포맷으로 리턴 됩니다.
  ```
  
 ### Response Syntax
+
 ```
 {
   "Count": Numeric,
