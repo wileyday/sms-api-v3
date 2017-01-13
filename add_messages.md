@@ -110,7 +110,7 @@ JSON 포맷으로 리턴 됩니다.
   "ScheduledDate": "2017-01-14T14:20:30+09:00",
   "Subject": "MMS 제목"
 }
- ```
+```
 
 ## Sample Response
 
