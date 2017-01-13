@@ -732,21 +732,93 @@ JSON 포맷으로 리턴 됩니다.
 
 </table>
 
-### Example Request
 
-<pre class="lang:xhtml decode:true">curl -XPOST https://api.coolsms.co.kr/sms/2/groups/GID<span class="s1">565bA3D7D216A</span>/add_messages -d 'api_key=NCS52A57F48C3D32&signature=202b4d499fbd71813c170a415f84097a&timestamp=1456364125&to=01012345678&from=029302266&text=Hello'
-</pre>
+### Request Syntax
+```
+      "Authorization" : {                                                       
+        "ApiKey": "xxxx",                                                       
+        "Date": "2017-01-14T13:10:30+09:00",                                    
+        "Salt": "SALT-123456789",                                               
+        "Signature": "SIGNATURExxxxx",                                          
+      },                                                                        
+      "To": [                                                                   
+        "01048597580",                                                          
+        "01048597581",                                                          
+        "01048597582",                                                          
+        "01048597583",                                                          
+        "01048597584"                                                           
+      ],                                                                        
+      "From": "029302266",                                                      
+      "Text": "테스트 문자",                                                    
+      "Type": "SMS",                                                            
+      "ImageID": "IMGABCDEFGGHIJKL",                                            
+      "Country": "82",                                                          
+      "ScheduledDate": "2017-01-14T14:20:30+09:00",                             
+      "Subject": "MMS 제목"                                                     
+    }                                 
+ ```
+ 
+### Response Syntax
+```
+{
+  "Count": Numeric,
+  "ResultList": [
+    {
+      "Code": String,
+      "Message": String
+    }
+  ]
+}
+```
 
-### Example Response
 
-<pre class="lang:default decode:true">{
-  "success_count": 3,
-  "error_count": 2,
-  "error_list": [
-    0: "62",
-    4: "54"
-  ]
-}</pre>
+### Sameple Request
+
+```
+      "Authorization" : {                                                       
+        "ApiKey": "xxxx",                                                       
+        "Date": "2017-01-14T13:10:30+09:00",                                    
+        "Salt": "SALT-123456789",                                               
+        "Signature": "SIGNATURExxxxx",                                          
+      },                                                                        
+      "To": [                                                                   
+        "01048597580",                                                          
+        "01048597581",                                                          
+        "01048597582",                                                          
+        "01048597583",                                                          
+        "01048597584"                                                           
+      ],                                                                        
+      "From": "029302266",                                                      
+      "Text": "테스트 문자",                                                    
+      "Type": "SMS",                                                            
+      "ImageID": "IMGABCDEFGGHIJKL",                                            
+      "Country": "82",                                                          
+      "ScheduledDate": "2017-01-14T14:20:30+09:00",                             
+      "Subject": "MMS 제목"                                                     
+    }                                 
+ ```
+
+### Sample Response
+
+```
+{
+  "Count": 3,
+  "ResultList": [
+    {
+      "Code": "1030",
+      "Message": "잔액 "
+    },
+    {
+      "Code": "1030",
+      "Message": "잔액 소진"
+    },
+    {
+      "Code": "1030",
+      "Message": "잔액 소진"
+    }
+  ]
+}
+```
 
 추가하신 메시지의 전체 개수가 success_count로 리턴되면 정상적으로 서버에 접수 완료된 것이며, 에러가 발생한 메시지는 error count 와 error_list 가 리턴됩니다.  
 리턴된 error_code의 정보는 http://www.coolsms.co.kr/Legacy_Result_Codes 을 참고하시면 됩니다. 여기서 리턴되는 Response의 내용은 서버에 전송 요청한 것에 대한 정보이며 실제 휴대전화로 전송한 것에 대한 정보가 아닙니다.  sent 조회로 실제 전송된 결과를 확인하실 수 있습니다.
