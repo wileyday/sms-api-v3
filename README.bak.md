@@ -71,49 +71,6 @@ new_group  ->  add_messages  ->  send
 new_group 호출로 메시지를 담을 그룹을 생성하고 리턴된 그룹아이디를 키로 add_messages 호출로 메시지를 접수하고 send 호출로 접수된 메시지를 서버단에 전송을 수행합니다. 이로 인해 한번 접수된 메시지는 유실 없이 안정적으로 발송이 보장됩니다.
 
 
-## GET new_group
-
-메시지를 담을 그룹을 생성하여 그룹아이디를 리턴합니다. 생성된 그룹은 2시간 후에 자동 삭제됩니다.
-
-### Resource URL
-
-https://coolsms.co.kr/sms/3/new_group
-
-### Parameters
-
-| Mandatory | Field | Description |
-| --------- | ----- | ----------- |
-|     Ο     | 인증정보 | 인증데이터는 필수입니다. [Authentication](http://www.coolsms.co.kr/REST_API#Authentication) 참고 |
-|           | srk | 솔루션 제공 수수료를 정산받을 솔루션 등록키<br>자세한 안내는 http://www.coolsms.co.kr/sp 을 참고하세요. |
-|           | mode | test로 입력할 경우 CARRIER 시뮬레이터로 시뮬레이션됩니다.<br>** 수신번호를 반드시 01000000000 으로 테스트 **<br>예약필드 datetime는 무시됩니다.<br>결과값은 60 잔액에서 실제 차감되며 다음날 새벽에 재충전됩니다. |
-|           | force_sms | 누리고푸시를 사용하더라도 강제로 문자 발송.<br>true 혹은 false(기본) |
-|           | only_ata  | 알림톡이 실패해도 문자메시지로 대체하여 발송하지 않습니다.<br>true 혹은 false(기본) |
-|           | site_user | API를 호출하는 사이트에서 관리하는 유저 아이디 입력.<br>미입력시 __private__ 으로 입력됩니다.<br>해당 아이디 앞으로 등록된 발신번호를 확인합니다.<br>발신번호 등록 API를 참고하세요.<br>http://www.coolsms.co.kr/SenderID_API |
-|           | os_platform | 클라이언트의 OS 및 플랫폼 버전<br>예) CentOS 6.6<br>(v1.5에서 추가됨) |
-|           | dev_lang | 개발 프로그래밍 언어<br>예) PHP 5.3.3<br>(v1.5에서 추가됨) |
-|           | sdk_version | SDK 버전<br>예) PHP SDK 1.5<br>(v1.5에서 추가됨) |
-|           | app_version | 어플리케이션 버전<br>예) Purplebook 4.1<br>(v1.5에서 추가됨) |
-
-
-### Response
-
-JSON 포맷으로 리턴 됩니다.
-
-| Mandatory | Field | Description |
-| --------- | ----- | ----------- |
-| O         | group_id | 그룹 아이디 |
-
-
-### Example Request
-
-<pre class="lang:xhtml decode:true">curl -XGET 'https://api.coolsms.co.kr/sms/2/new_group?api_key=NCS52A57F48C3D32&signature=202b4d499fbd71813c170a415f84097a&timestamp=1456364125'</pre>
-
-### Example Response
-
-<pre class="lang:default decode:true crayon-selected">{
-  "group_id":"565ba3d7d216a"
-}</pre>
-
 
 ## GET group_list
 
