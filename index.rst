@@ -12,5 +12,6 @@ SMS REST API v3
    :maxdepth: 1
 
    authentication
+   add_messages
 
 :ref:`search`
