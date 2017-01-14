@@ -9,8 +9,7 @@ POST
 
 Path
 ----
-
-  group/{group_id}/add_messages
+group/{group_id}/add_messages
 
 Resource URL
 ------------
