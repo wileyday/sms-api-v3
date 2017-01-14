@@ -6,7 +6,7 @@ POST groups/{group_id}/add_messages
 Resource URL
 ------------
 
-.. note:: https://coolsms.co.kr/sms/3/group/{group_id}/add_messages
+`https://coolsms.co.kr/sms/3/group/{group_id}/add_messages`_
 
 Parameters
 ----------
