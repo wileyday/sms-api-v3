@@ -83,7 +83,7 @@ Request Syntax
 Response Syntax
 ---------------
 
-::
+.. code-block:: javascript
 
   {
     "Count": Number,
@@ -98,7 +98,7 @@ Response Syntax
 Sameple Request
 ---------------
 
-::
+.. code-block:: javascript
 
   {
     "Authorization" : {
@@ -127,7 +127,7 @@ Sameple Request
 Sample Response
 ---------------
 
-::
+.. code-block:: javascript
 
   {
     "Count": 3,
