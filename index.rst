@@ -13,7 +13,5 @@ SMS REST API v3
 
    authentication
    group
-      add_messages
    codes
 
-:ref:`search`
