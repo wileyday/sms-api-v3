@@ -9,10 +9,11 @@ SMS REST API v3
 --------
 .. toctree::
    :glob:
-   :maxdepth: 1
+   :maxdepth: 2
 
    authentication
-   add_messages
+   group
+      add_messages
    codes
 
 :ref:`search`
