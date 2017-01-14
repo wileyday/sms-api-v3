@@ -2,3 +2,11 @@
 ========
 
 그룹메시지를 발송할 수 있습니다.
+
+차례
+--------
+.. toctree::
+    :glob:
+    :maxdepth: 2
+
+    add_messages
