@@ -9,7 +9,7 @@ SMS REST API v3
 --------
 .. toctree::
    :glob:
-   :maxdepth: 2
+   :maxdepth: 1
 
    authentication
    group
