@@ -15,26 +15,23 @@ To
   수신번호 입력, 콤마(,)로 구분된 수신번호 입력가능
   
   예) 01012345678,01023456789,01034567890
-  
 From
   발신번호 입력, 2015/10/16 발신번호 사전등록제에 의해 반드시 등록된 번호만 허용됩니다. (해외문자 제외)
   
   예) 0212345678
-
-
-- Text
+Text
   문자내용
-- Type
+Type
   CTA(친구톡), ATA(알림톡), SMS(90바이트), LMS(장문 2,000바이트), MMS(장문+이미지)
   미입력시 SMS
   해외문자인 경우 SMS만 가능
-- ImageID
+ImageID
   발송할 이미지의 아이디<br>type이 MMS일 때 필수
-- Country
+Country
   한국: 82, 일본: 81, 중국: 86, 미국: 1, 기타 등등 (기본 한국)<br>http://countrycode.org 참고
-- ScheduledDate
+ScheduledDate
   예약시간을 YYYYMMDDHHMISS 포맷으로 입력 (입력 없거나 지난날짜를 입력하면 바로 전송)<br>예) 20131216090510 (2013년 12월 16일 9시 5분 10초에 발송되도록 예약)
-- Subject
+Subject
   LMS, MMS 일때 제목 (40바이트)
 
 
