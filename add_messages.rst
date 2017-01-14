@@ -57,7 +57,7 @@ to 필드의 전화번호 수는 최대 1,000개이며 넘을 경우 오류를 �
 Request Syntax
 --------------
 
-::
+.. code-block:: javascript
 
   {
     "Authorization" : {
