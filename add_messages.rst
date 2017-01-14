@@ -1,7 +1,16 @@
-POST groups/{group_id}/add_messages
-===================================
+메시지 추가하기 : POST groups/{group_id}/add_messages
+==================================================
 
 그룹에 발송할 문자메시지를 추가합니다.
+
+Method
+------
+POST
+
+Path
+----
+
+  group/{group_id}/add_messages
 
 Resource URL
 ------------
