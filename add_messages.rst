@@ -1,7 +1,3 @@
-::
-  if (a) {
-  }
-
 POST groups/{group_id}/add_messages
 ===================================
 
@@ -61,7 +57,8 @@ to 필드의 전화번호 수는 최대 1,000개이며 넘을 경우 오류를 �
 Request Syntax
 --------------
 
-code::
+::
+
   {
     "Authorization" : {
       "ApiKey": String,
@@ -87,6 +84,7 @@ Response Syntax
 ---------------
 
 ::
+
   {
     "Count": Number,
     "ResultList": [
@@ -101,6 +99,7 @@ Sameple Request
 ---------------
 
 ::
+
   {
     "Authorization" : {
       "ApiKey": "xxxx",
@@ -129,6 +128,7 @@ Sample Response
 ---------------
 
 ::
+
   {
     "Count": 3,
     "ResultList": [
