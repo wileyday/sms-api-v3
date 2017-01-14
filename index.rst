@@ -13,5 +13,6 @@ SMS REST API v3
 
    authentication
    add_messages
+   codes
 
 :ref:`search`
