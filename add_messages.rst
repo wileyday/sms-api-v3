@@ -111,6 +111,12 @@ Sameple Request
 
 .. code-block:: javascript
 
+  POST / HTTP/1.1
+  Content-Length: <PayloadSizeBytes>     
+  User-Agent: <UserAgentString>
+  Content-Type: application/json
+  Authorization: HMAC-SHA256 ApiKey=<API_KEY>, Date=<DATE>, Salt=<SALT>, Signature=<SIGNATURE>
+  
   {
     "Authorization" : {
       "ApiKey": "xxxx",
@@ -139,6 +145,10 @@ Sample Response
 ---------------
 
 .. code-block:: javascript
+
+  HTTP/1.1 200 OK
+  Content-Type: application/json
+  Content-Length: <PayloadSizeBytes>
 
   {
     "Count": 3,
