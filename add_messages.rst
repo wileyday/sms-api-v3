@@ -9,12 +9,12 @@ POST
 
 Path
 ----
-group/{group_id}/add_messages
+group/{group_id}/addMessages
 
 Resource URL
 ------------
 
-`<https://coolsms.co.kr/sms/3/group/{group_id}/add_messages>`_
+`<https://coolsms.co.kr/sms/3/group/{group_id}/addMessages>`_
 
 Parameters
 ----------
@@ -91,7 +91,9 @@ Request Syntax
     "ImageID": String,
     "Country": String,
     "ScheduledDate": String,
-    "Subject": String
+    "Subject": String,
+    "SenderKey": String,
+    "TemplateCode": String
   }
 
  
@@ -101,11 +103,11 @@ Response Syntax
 .. code-block:: javascript
 
   {
-    "Count": Number,
+    "ErrorCount": Number,
     "ResultList": [
       {
-        "Code": String,
-        "Message": String
+        "MessageID": String,
+        "Code": String
       }
     ]
   }
@@ -155,20 +157,20 @@ Sample Response
   Content-Length: <PayloadSizeBytes>
 
   {
-    "Count": 3,
+    "ErrorCount": 2,
     "ResultList": [
       {
-        "Code": "1030",
-        "Message": "잔액 "
+        "MessageID": "MIDXXXXXXXXXXXX",
+        "ResultCode": "2000"
       },
       {
-        "Code": "1030",
-        "Message": "잔액 소진"
+        "MessageID": "MIDXXXXXXXXXXXX",
+        "ResultCode": "1030"
       },
       {
-        "Code": "1030",
-        "Message": "잔액 소진"
-      }
+        "MessageID": "MIDXXXXXXXXXXXX",
+        "ResultCode": "1030"
+      }      
     ]
   }
 
