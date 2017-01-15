@@ -109,10 +109,17 @@ Response Syntax
     "ResultList": [
       {
         "MessageID": String,
-        "Code": String
+        "StatusCode": String
       }
     ]
   }
+
+ErrorCount
+  오류 카운트
+MessageID
+  메시지ID
+StatusCoe
+  쿨에스엠에 메시지 상태 코드
 
 Sameple Request
 ---------------
