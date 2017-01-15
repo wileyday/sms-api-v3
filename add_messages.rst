@@ -75,25 +75,27 @@ Request Syntax
 .. code-block:: javascript
 
   {
-    "Authorization" : {
+    "Authorization": {
       "ApiKey": String,
       "Date": String,
       "Salt": String,
       "Signature": String,
     },
-    "To": [
-      String,
-      ...
+    "Messages": [
+      "To": [
+        String,
+        ...
+      ],
+      "From": String,
+      "Text": String,
+      "Type": String,
+      "Subject": String,      
+      "ImageID": String,
+      "Country": String,
+      "ScheduledDate": String,
+      "SenderKey": String,
+      "TemplateCode": String      
     ],
-    "From": String,
-    "Text": String,
-    "Type": String,
-    "ImageID": String,
-    "Country": String,
-    "ScheduledDate": String,
-    "Subject": String,
-    "SenderKey": String,
-    "TemplateCode": String
   }
 
  
