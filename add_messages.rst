@@ -43,6 +43,10 @@ ScheduledDate
   - 예) 20131216090510 (2013년 12월 16일 9시 5분 10초에 발송되도록 예약)
 Subject
   - LMS, MMS 일때 제목 (40바이트)
+SenderKey
+  - 알림톡 Sender Key
+TemplateCode
+  - 알림톡 Template Code
 
 
 제한 사항
