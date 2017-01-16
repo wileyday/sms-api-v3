@@ -7,5 +7,5 @@
     :glob:
     :maxdepth: 1
 
-    new_group
-    add_messages
+    createGroup
+    addMessages
