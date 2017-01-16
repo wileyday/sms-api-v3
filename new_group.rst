@@ -75,6 +75,17 @@ Request Syntax
       "APPVersion": String
     }
   }
+  
+Response Syntax
+---------------
+.. code-block:: javascript
+
+  {
+    "GroupID": String
+  }
+
+GroupID
+  그룹ID가 리턴됩니다.
 
 Example Request
 ---------------
@@ -107,6 +118,10 @@ Example Response
 
 .. code-block:: javascript
 
+  HTTP/1.1 200 OK
+  Content-Type: application/json
+  Content-Length: <PayloadSizeBytes>
+
   {
-    "group_id": "565ba3d7d216a"
+    "GroupID": "GID587C220F0734A"
   }
