@@ -9,12 +9,12 @@ POST
 
 Path
 ----
-group/{group_id}/addMessages
+group/{GroupID}/addMessages
 
 Resource URL
 ------------
 
-`<https://coolsms.co.kr/sms/3/group/{group_id}/addMessages>`_
+`<https://coolsms.co.kr/sms/3/group/{GroupID}/addMessages>`_
 
 Parameters
 ----------
