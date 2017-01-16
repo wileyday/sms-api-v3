@@ -81,25 +81,25 @@ Example Request
 
 .. code-block:: javascript
 
-POST / HTTP/1.1
-Content-Length: <PayloadSizeBytes>
-User-Agent: <UserAgentString>
-Content-Type: application/json
-Authorization: HMAC-SHA256 ApiKey=<API_KEY>, Date=<DATE>, Salt=<SALT>, Signature=<SIGNATURE>
+  POST / HTTP/1.1
+  Content-Length: <PayloadSizeBytes>
+  User-Agent: <UserAgentString>
+  Content-Type: application/json
+  Authorization: HMAC-SHA256 ApiKey=<API_KEY>, Date=<DATE>, Salt=<SALT>, Signature=<SIGNATURE>
 
-{
-  "GroupOptions": {
-    "SRK": String,
-    "Mode": String,
-    "ForceSMS": String,
-    "OnlyATA": String,
-    "SiteUser": String,
-    "OSPlatform": String,
-    "DevLanguage": String,
-    "SDKVersion": String,
-    "APPVersion": String
+  {
+    "GroupOptions": {
+      "SRK": String,
+      "Mode": String,
+      "ForceSMS": String,
+      "OnlyATA": String,
+      "SiteUser": String,
+      "OSPlatform": String,
+      "DevLanguage": String,
+      "SDKVersion": String,
+      "APPVersion": String
+    }
   }
-}
 
 
 Example Response
