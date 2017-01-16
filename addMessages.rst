@@ -9,12 +9,12 @@ POST
 
 Path
 ----
-group/{GroupID}/addMessages
+group/{GroupId}/addMessages
 
 Resource URL
 ------------
 
-`<https://coolsms.co.kr/sms/3/group/{GroupID}/addMessages>`_
+`<https://coolsms.co.kr/sms/3/group/{GroupId}/addMessages>`_
 
 Parameters
 ----------
@@ -33,7 +33,7 @@ Type
   - CTA(친구톡), ATA(알림톡), SMS(90바이트), LMS(장문 2,000바이트), MMS(장문+이미지)
   - 미입력시 SMS
   - 해외문자인 경우 SMS만 가능
-ImageID
+ImageId
   - 발송할 이미지의 아이디<br>type이 MMS일 때 필수
 Country
   - 한국: 82, 일본: 81, 중국: 86, 미국: 1, 기타 등등 (기본 한국)
@@ -85,7 +85,7 @@ Request Syntax
         "Text": String,
         "Type": String,
         "Subject": String,      
-        "ImageID": String,
+        "ImageId": String,
         "Country": String,
         "ScheduledDate": String,
         "SenderKey": String,
@@ -104,7 +104,7 @@ Response Syntax
     "ErrorCount": Number,
     "ResultList": [
       {
-        "MessageID": String,
+        "MessageId": String,
         "StatusCode": String
       }
     ]
@@ -112,7 +112,7 @@ Response Syntax
 
 ErrorCount
   오류 카운트
-MessageID
+MessageId
   메시지ID
 StatusCoe
   쿨에스엠에 메시지 상태 코드
@@ -141,7 +141,7 @@ Sameple Request
         "From": "029302266",
         "Text": "테스트 문자",
         "Type": "SMS",
-        "ImageID": "IMGABCDEFGGHIJKL",
+        "ImageId": "IMGABCDEFGGHIJKL",
         "Country": "82",
         "ScheduledDate": "2017-01-14T14:20:30+09:00",
         "Subject": "MMS 제목"
@@ -163,15 +163,15 @@ Sample Response
     "ErrorCount": 2,
     "ResultList": [
       {
-        "MessageID": "MIDXXXXXXXXXXXX",
+        "MessageId": "MIDXXXXXXXXXXXX",
         "ResultCode": "2000"
       },
       {
-        "MessageID": "MIDXXXXXXXXXXXX",
+        "MessageId": "MIDXXXXXXXXXXXX",
         "ResultCode": "1030"
       },
       {
-        "MessageID": "MIDXXXXXXXXXXXX",
+        "MessageId": "MIDXXXXXXXXXXXX",
         "ResultCode": "1030"
       }      
     ]
