@@ -3,9 +3,17 @@
 
 메시지를 담을 그룹을 생성하여 그룹아이디를 리턴합니다. 생성된 그룹은 2시간 후에 자동 삭제됩니다.
 
+Method
+------
+POST
+
+Path
+----
+createGroup
+
 Resource URL
 ------------
-`<https://coolsms.co.kr/sms/3/new_group>`_
+`<https://coolsms.co.kr/sms/3/createGroup>`_
 
 Parameters
 ----------
@@ -13,7 +21,10 @@ SRK
   - 솔루션 제공 수수료를 정산받을 솔루션 등록키
   - 자세한 안내는 http://www.coolsms.co.kr/sp 을 참고하세요.  
 Mode
-  - test로 입력할 경우 CARRIER 시뮬레이터로 시뮬레이션됩니다.<br>** 수신번호를 반드시 01000000000 으로 테스트 **<br>예약필드 datetime는 무시됩니다.<br>결과값은 60 잔액에서 실제 차감되며 다음날 새벽에 재충전됩니다.
+  - test로 입력할 경우 CARRIER 시뮬레이터로 시뮬레이션됩니다.
+  - ** 수신번호를 반드시 01000000000 으로 테스트 **
+  - 예약필드 datetime는 무시됩니다.
+  - 결과값은 60 잔액에서 실제 차감되며 다음날 새벽에 재충전됩니다.
 ForceSMS
   - 누리고푸시를 사용하더라도 강제로 문자 발송.
   - true 혹은 false(기본)
@@ -47,10 +58,48 @@ JSON 포맷으로 리턴 됩니다.
 GroupID
   - 그룹아이디
 
+Request Syntax
+--------------
+.. code-block:: javascript
+
+  {
+    "GroupOptions": {
+      "SRK": String,
+      "Mode": String,
+      "ForceSMS": String,
+      "OnlyATA": String,
+      "SiteUser": String,
+      "OSPlatform": String,
+      "DevLanguage": String,
+      "SDKVersion": String,
+      "APPVersion": String
+    }
+  }
 
 Example Request
 ---------------
 
+.. code-block:: javascript
+
+POST / HTTP/1.1
+Content-Length: <PayloadSizeBytes>
+User-Agent: <UserAgentString>
+Content-Type: application/json
+Authorization: HMAC-SHA256 ApiKey=<API_KEY>, Date=<DATE>, Salt=<SALT>, Signature=<SIGNATURE>
+
+{
+  "GroupOptions": {
+    "SRK": String,
+    "Mode": String,
+    "ForceSMS": String,
+    "OnlyATA": String,
+    "SiteUser": String,
+    "OSPlatform": String,
+    "DevLanguage": String,
+    "SDKVersion": String,
+    "APPVersion": String
+  }
+}
 
 
 Example Response
