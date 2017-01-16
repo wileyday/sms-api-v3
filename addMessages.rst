@@ -75,26 +75,22 @@ Request Syntax
 .. code-block:: javascript
 
   {
-    "Authorization": {
-      "ApiKey": String,
-      "Date": String,
-      "Salt": String,
-      "Signature": String,
-    },
     "Messages": [
-      "To": [
-        String,
-        ...
-      ],
-      "From": String,
-      "Text": String,
-      "Type": String,
-      "Subject": String,      
-      "ImageID": String,
-      "Country": String,
-      "ScheduledDate": String,
-      "SenderKey": String,
-      "TemplateCode": String      
+      {
+        "To": [
+          String,
+          ...
+        ],
+        "From": String,
+        "Text": String,
+        "Type": String,
+        "Subject": String,      
+        "ImageID": String,
+        "Country": String,
+        "ScheduledDate": String,
+        "SenderKey": String,
+        "TemplateCode": String
+      }
     ],
   }
 
@@ -133,26 +129,24 @@ Sameple Request
   Authorization: HMAC-SHA256 ApiKey=<API_KEY>, Date=<DATE>, Salt=<SALT>, Signature=<SIGNATURE>
   
   {
-    "Authorization" : {
-      "ApiKey": "xxxx",
-      "Date": "2017-01-14T13:10:30+09:00",
-      "Salt": "SALT-123456789",
-      "Signature": "SIGNATURExxxxx",
-    },
-    "To": [
-      "01048597580",
-      "01048597581",
-      "01048597582",
-      "01048597583",
-      "01048597584"
-    ],
-    "From": "029302266",
-    "Text": "테스트 문자",
-    "Type": "SMS",
-    "ImageID": "IMGABCDEFGGHIJKL",
-    "Country": "82",
-    "ScheduledDate": "2017-01-14T14:20:30+09:00",
-    "Subject": "MMS 제목"
+    "Messages": [
+      {
+        "To": [
+          "01048597580",
+          "01048597581",
+          "01048597582",
+          "01048597583",
+          "01048597584"
+        ],
+        "From": "029302266",
+        "Text": "테스트 문자",
+        "Type": "SMS",
+        "ImageID": "IMGABCDEFGGHIJKL",
+        "Country": "82",
+        "ScheduledDate": "2017-01-14T14:20:30+09:00",
+        "Subject": "MMS 제목"
+      }
+    ]
   }
 
 
