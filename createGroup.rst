@@ -13,7 +13,7 @@ createGroup
 
 Resource URL
 ------------
-`<https://coolsms.co.kr/sms/3/createGroup>`_
+`<https://solapi.com/sms/3/createGroup>`_
 
 Parameters
 ----------
