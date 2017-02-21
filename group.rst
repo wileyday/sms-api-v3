@@ -9,3 +9,4 @@
 
     createGroup
     addMessages
+    group/send
