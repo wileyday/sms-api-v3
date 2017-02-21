@@ -8,5 +8,6 @@
     :maxdepth: 1
 
     createGroup
-    addMessages
+    group/addMessages
     group/send
+    groupList
