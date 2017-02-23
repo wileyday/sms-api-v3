@@ -8,7 +8,9 @@
     :maxdepth: 1
 
     createGroup
-    groupList    
+    groupList  
+    deleteGroups
+    getGroupInfo
     group/addMessages
     group/messageList
     group/deleteMessages
