@@ -10,7 +10,7 @@
     createGroup
     groupList  
     deleteGroups
-    getGroupInfo
+    group/getGroupInfo
     group/addMessages
     group/messageList
     group/deleteMessages
