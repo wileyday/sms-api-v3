@@ -12,7 +12,7 @@
     deleteGroups
     group/getGroupInfo
     group/addMessages
-    group/messageList
+    group/getMessageList
     group/deleteMessages
     group/send
 
