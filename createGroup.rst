@@ -20,16 +20,16 @@ Request Syntax
 .. code-block:: javascript
 
   {
-    "GroupOptions": {
-      "AppId": String,
-      "Mode": String,
-      "ForceSms": String,
-      "OnlyAta": String,
-      "SiteUser": String,
-      "OsPlatform": String,
-      "DevLanguage": String,
-      "SdkVersion": String,
-      "AppVersion": String
+    "groupOptions": {
+      "appId": String,
+      "appVersion": String,      
+      "mode": String,
+      "forceSms": String,
+      "onlyAta": String,
+      "siteUser": String,
+      "osPlatform": String,
+      "devLanguage": String,
+      "sdkVersion": String
     }
   }
 
@@ -97,16 +97,16 @@ Example Request
   Authorization: HMAC-SHA256 ApiKey=<API_KEY>, Date=<DATE>, Salt=<SALT>, Signature=<SIGNATURE>
 
   {
-    "GroupOptions": {
-      "AppId": String,
-      "Mode": String,
-      "ForceSms": String,
-      "OnlyAta": String,
-      "SiteUser": String,
-      "OsPlatform": String,
-      "DevLanguage": String,
-      "SdkVersion": String,
-      "AppVersion": String
+    "groupOptions": {
+      "appId": String,
+      "mode": String,
+      "forceSms": String,
+      "onlyAta": String,
+      "siteUser": String,
+      "osPlatform": String,
+      "devLanguage": String,
+      "sdkVersion": String,
+      "appVersion": String
     }
   }
 
@@ -121,5 +121,5 @@ Example Response
   Content-Length: <PayloadSizeBytes>
 
   {
-    "GroupId": "GID587C220F0734A"
+    "groupId": "GID587C220F0734A"
   }
