@@ -14,7 +14,7 @@ group/{GroupId}/addMessages
 Resource URL
 ------------
 
-`<https://coolsms.co.kr/sms/3/group/{GroupId}/addMessages>`_
+`<https://solapi.com/GroupMessage/3/group/{GroupId}/addMessages>`_
 
 
 
