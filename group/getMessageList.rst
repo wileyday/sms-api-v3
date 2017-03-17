@@ -9,12 +9,12 @@ GET
 
 Path
 ----
-group/{GroupId}/messageList
+group/{GroupId}/getMessageList
 
 Resource URL
 ------------
 
-`<https://coolsms.co.kr/sms/3/group/{GroupId}/messageList>`_
+`<https://coolsms.co.kr/sms/3/group/{groupId}/getMessageList>`_
 
 Parameters
 ----------
